@@ -1,0 +1,40 @@
+
+How JSON works
+
+// if we have more than one objects then put them in square brackets. 
+// In one square bracket we can put more number of objects.
+// Now this is called JSON
+var a = [
+    {
+        "name": "Avengers",
+        "rating": 4.5,
+        "type": "Action",
+    },
+    {
+        "name": "Romeo Juliet",
+        "rating": 4.9,
+        "type": "Romantic",
+    },
+    {
+        "name": "Joker",
+        "rating": 4.8,
+        "type": "Thriller",
+    }       
+]
+// This format is called JSON data format
+
+// output
+a[1].name
+'Romeo Juliet'
+a[0].name
+'Avengers'
+a[2].name
+'Joker'
+a[2].type
+'Thriller'
+a[0].type
+'Action'
+a[1].rating
+4.9
+a[2].rating
+4.8

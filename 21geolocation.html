@@ -1,0 +1,59 @@
+<html>
+  <head> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <!-- <button class="btn btn-info" onclick="geolocation()">Get Location
+      <span id="out"></span>
+      <span id="weather"></span>
+    </button> -->
+    <button class="" onclick="geolocation()">
+      <i class="bi bi-geo-alt-fill" style="color:#00a8e1;"></i>
+      <span id="out" style="font-weight: bold;"><i class="bi bi-buildings-fill" style="color: brown;"></i></span>
+      <span id="weather" style="font-weight: bolder;"></span>
+      <i class="bi bi-cloud-sun-fill" style="color: orangered;"></i>
+    </button>
+    <!-- <p id="out"></p>
+    <p id="weather"></p> -->
+    <script>
+      // let x = document.getElementById("out");
+      // let y = document.getElementById("weather");
+
+      function geolocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerText = "Geo Not Supported";
+        }
+      }
+
+      function showPosition(data) {
+        console.log(data);
+        let x = document.getElementById("out");
+        let y = document.getElementById("weather");
+        let lat = data.coords.latitude;
+        let lon = data.coords.longitude;
+        // let out = `Latitude is ${lat} and Longitude is ${lon}`;
+        // x.innerText = out;
+        const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+        /// api calling
+        fetch(url,{method: 'GET'})
+        /// return promise
+        .then((res) => res.json())
+        /// return data
+        .then((data) => {
+            console.log(data)
+            let city = data.city.name
+            let temp = data.list[0].temp.day
+            y.innerText = `${city} ${temp}°C`
+        })
+      }
+    </script>
+  </body>
+</html>
+
+
+
+

@@ -1,0 +1,102 @@
+
+<!--  DOM  -->
+
+DOM 
+Document Object Model
+
+> It is used to target the html elements using javascript
+
+By using :
+
+tagname        >  getElementsByTagName
+class name     >  getElementsByClassName
+id             >  getElementById   (Element) because id is unique.
+
+Before that we need to mention first in the console is - document
+> document - One complete website refer as the document
+
+Then, 
+
+Targeting tagname we use :
+document.getElementsByTagName()
+<!-- we can target and manipulate the elements -->
+
+<!-- First (document) for considering entire page -->
+document
+> #document
+
+<!-- It gives the first existent h1 element -->
+document.getElementsByTagName('h1')
+> HTMLCollection [h1.page-title]
+
+<!-- If h1 elements are more then we use index numbers to call what we want-->
+document.getElementsByTagName('h1')[0]
+> <h1 class=​"page-title">​Responsive Portfolio Website Templates​</h1>
+
+<!-- Like Example of a tags are more -->
+document.getElementsByTagName('a')
+> HTMLCollection(1184) [a#skip-link.g-nav-skip, a.g-brand.w-nav-brand, a.g-nav_menu-link_wrapper-mobile.w-nav-link, 
+  a.g-nav_menu-dropdown-link.w-inline-block, a.g-nav_menu-dropdown-link.w-inline-block, 
+  a.g-nav_menu-dropdown-link.w-inline-block, a.g-nav_menu-dropdown-link.w-inline-block, 
+  a.g-nav_menu-dropdown-link.w-inline-block, a.g-nav_menu-dropdown-link.w-inline-block, 
+  a.g-nav_menu-dropdown-link.w-inline-block, a.g-nav_menu-dropdown-link.w-inline-block, 
+  a.g-nav_menu-dropdown-link.w-inline-block, a.g-nav_menu-dropdown-link.w-inline-block, 
+  a.g-nav_menu-dropdown-link.w-inline-block, a.g-nav_menu-dropdown-link.w-inline-block, 
+  a.g-nav_menu-dropdown-link.w-inline-block, a.g-nav_menu-dropdown-link.w-inline-block, 
+  a.g-nav_menu-dropdown-link.w-inline-block,
+
+<!-- So we use index [0] -->
+document.getElementsByTagName('a')[0]
+> <a id=​"skip-link" href=​"#main" class=​"g-nav-skip">​Skip to main content​</a>​
+
+<!-- To take content of h1 element use (.innerText) -->​
+document.getElementsByTagName('h1')[0].innerText
+> 'Responsive Portfolio Website Templates'
+
+<!-- we can rename the h1 content using (.innerText = " ") -->
+document.getElementsByTagName('h1')[0].innerText="Portfolio"
+> 'Portfolio'
+
+<!-- To h1 of index[0] we can add color (.style.color = " ") -->
+document.getElementsByTagName('h1')[0].style.color="red"
+> 'red'
+
+<!-- To h1 of index[0] we can add (.style.visibility = "hidden") -->
+document.getElementsByTagName('h1')[0].style.visibility="hidden"
+> 'hidden'
+
+<!-- To h1 of index[0] we can add (.style.visibility = "visible") -->
+document.getElementsByTagName('h1')[0].style.visibility="visible"
+> 'visible'
+
+//////////////////////////////////////////////////////////////////////////
+
+Targeting class name we use :
+document.getElementsByClassName()
+
+<!-- Same as we understood above for all 3 elements -->
+
+document.getElementsByClassName('section')
+> HTMLCollection(5) [div.section.cc-static-hero, div.section, div.section, div.section, div#all-tags-section.section.cc-all-tags.wf-section, all-tags-section: div#all-tags-section.section.cc-all-tags.wf-section]0: div.section.cc-static-hero1: div.section2: div.section3: div.section4: div#all-tags-section.section.cc-all-tags.wf-sectionall-tags-section: div#all-tags-section.section.cc-all-tags.wf-sectionlength: 5[[Prototype]]: HTMLCollection
+
+document.getElementsByClassName('section')[0]
+> <div class=​"section cc-static-hero">​ flex <div class=​"mp-breadcrumbs">​…​</div>​ flex <div class=​"container cc-small-container">​…​</div>​</div>​
+
+document.getElementsByClassName('section')[0].innerText="videos"
+> 'videos'
+
+document.getElementsByClassName('section')[0].innerText="Welcome Home"
+> 'Welcome Home'
+
+
+//////////////////////////////////////////////////////////////////////////
+
+Targeting id we use :
+document.getElementsById()
+
+document.getElementById('id')
+> null
+
+<!-- when id is not used in particular website then it is null -->
+<!-- If id is mentioned then its same like everything learnt above -->
+<!-- Since id is unique so, we don't use index number -->

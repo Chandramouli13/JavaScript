@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to left, red, blue);
+    text-align: center;
+    margin-top: 10%;
+}
+
+#heading{
+    font-size:50px;
+    margin-left: 28%;
+    position: absolute;
+    color:white
+}
+
+.dropdown{
+    height:60px;
+    width: 50%;
+    margin-left: 27%;
+    margin-top: 5%;
+    position: absolute;
+    /* border:2px solid white */
+
+}
+
+select{
+    height:60px;
+    width:40%;
+    font-size:15px;
+    text-align:center  
+}
+
+.restSelect{
+    width:59% 
+}
