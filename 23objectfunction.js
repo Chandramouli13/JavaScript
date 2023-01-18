@@ -43,3 +43,16 @@ French
 >> language {name: 'French', country: 'France', greet: ƒ}
 French.greet()
 >> 'Say Hi to French'
+
+
+////////////////////////////////
+
+var english = new language('english','USA')
+function language(name,country) {
+    this.name = name;
+    this.country = country;
+    this.greet = () => {return `Say Hi to ${name}`}
+}
+// output
+english.greet()
+'Say Hi to english'

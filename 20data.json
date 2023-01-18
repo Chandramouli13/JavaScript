@@ -3,6 +3,8 @@ How JSON works
 
 // if we have more than one objects then put them in square brackets. 
 // In one square bracket we can put more number of objects.
+// it is a collection of objects.
+// And also collection can call as document which is inside {}.
 // Now this is called JSON
 var a = [
     {

@@ -44,3 +44,4 @@ console.log(sayHi.greet())
 // output
 >> Say Hi to Peter Parker
 // The output takes from the input of local scope
+
